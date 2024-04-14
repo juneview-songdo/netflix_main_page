@@ -34,11 +34,12 @@ class CategoryItemViewState extends State<CategoryItemView> with StateMother {
             .fontWeight(FontWeight.w600)
             .fontSize(22)
             .alignment(Alignment.centerLeft)
-            .padding(bottom: 4),
+            .padding(bottom: 4, left: 10),
         Container(
           height: widget.height,
           width: double.infinity,
           child: ListView.builder(
+            padding: const EdgeInsets.only(left: 10),
               scrollDirection: Axis.horizontal,
               itemCount: widget.posterPaths.length,
               itemBuilder: (context, index) {

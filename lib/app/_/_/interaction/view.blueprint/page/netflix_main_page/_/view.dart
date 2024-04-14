@@ -197,21 +197,21 @@ class NewViewState extends State<NewView> with StateMother {
                       ),
                     ),
                     Gap(30),
-                    // Column(
-                    //   crossAxisAlignment: CrossAxisAlignment.start,
-                    //   children: [
-                    //     for (var poster in controller.posterList)
-                    //       NetflixStyleHorizontalListViewWidget(
-                    //         posterImageUrlList: [
-                    //           for (var postUrl in poster['images'])
-                    //             TMDBMovieApi.to.getImageUrl(postUrl),
-                    //         ],
-                    //         width: poster['width'],
-                    //         height: poster['height'],
-                    //         listTitle: poster['title'],
-                    //       ),
-                    //   ],
-                    // ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        for (var poster in controller.posterList)
+                          NetflixStyleHorizontalListViewWidget(
+                            posterImageUrlList: [
+                              for (var postUrl in poster['images'])
+                                TMDBMovieApi.to.getImageUrl(postUrl),
+                            ],
+                            width: poster['width'],
+                            height: poster['height'],
+                            listTitle: poster['title'],
+                          ),
+                      ],
+                    ),
                   ],
                 ),
               ),

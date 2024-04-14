@@ -50,7 +50,7 @@ class CategoryItemViewState extends State<CategoryItemView> with StateMother {
                     borderRadius: BorderRadius.circular(6),
                     image: DecorationImage(
                         image: AssetImage(widget.posterPaths[index]),
-                        fit: BoxFit.cover),
+                        fit: BoxFit.fill),
                   ),
                 ).gestures(onTap: () {});
               }),
